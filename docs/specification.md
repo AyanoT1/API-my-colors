@@ -50,6 +50,8 @@ The API allows users to manage color palettes. Palettes are stored as JavaScript
 
 ## Get palettes
 
+To get all the color palettes stored use HTTP GET to the route ```/api/palettes```
+
 To retrieve a specific palette use the route ```/api/palettes/id/:id```, alternatively you can retrieve them by name using the route ```/api/palettes/name/:name```
 
 Example on success:
