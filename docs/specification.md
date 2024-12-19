@@ -14,15 +14,15 @@
 The API allows users to manage color palettes. Palettes are stored as JavaScript objects with the following structure:
 
 ```json
-{   
-    id: 1,
-    size: 5,
-    name: "pastel-rainbow",
-    color1: "#ffbfbf",
-    color2: "#fbe0ae",
-    color3: "#bcfbae",
-    color4: "#bbc0ff",
-    color5: "#fbbee9"
+{
+  "id": 1,
+  "size": 5,
+  "name": "pastel-rainbow",
+  "color1": "#ffbfbf",
+  "color2": "#fbe0ae",
+  "color3": "#bcfbae",
+  "color4": "#bbc0ff",
+  "color5": "#fbbee9"
 }
 ```
 
@@ -55,21 +55,21 @@ To retrieve a specific palette use the route ```/api/palettes/id/:id```, alterna
 Example on success:
 ```json
 {
-    "id": 1,
-    "size": 5,
-    "name": "pastel-rainbow",
-    "color1": "#ffbfbf",
-    "color2": "#fbe0ae",
-    "color3": "#bcfbae",
-    "color4": "#bbc0ff",
-    "color5": "#fbbee9"
+  "id": 1,
+  "size": 5,
+  "name": "pastel-rainbow",
+  "color1": "#ffbfbf",
+  "color2": "#fbe0ae",
+  "color3": "#bcfbae",
+  "color4": "#bbc0ff",
+  "color5": "#fbbee9"
 }
 ```
 
 Example on error:
 ```json
 {
-    "error": "Palette not found"
+  "error": "Palette not found"
 }
 ```
 
@@ -81,13 +81,13 @@ Example body:
 
 ```json
 {   
-    size: 5,
-    name: "pastel-rainbow",
-    color1: "#ffbfbf",
-    color2: "#fbe0ae",
-    color3: "#bcfbae",
-    color4: "#bbc0ff",
-    color5: "#fbbee9",
+  size: 5,
+  name: "pastel-rainbow",
+  color1: "#ffbfbf",
+  color2: "#fbe0ae",
+  color3: "#bcfbae",
+  color4: "#bbc0ff",
+  color5: "#fbbee9",
 }
 ```
 
@@ -98,14 +98,14 @@ Example body:
 Example success response:
 ```json
 {
-    id: 219
+  id: 219
 }
 ```
 
 Example error response:
 ```json
 {
-    error: "Name already in use"
+  error: "Name already in use"
 }
 ```
 
@@ -117,6 +117,6 @@ The API allows a maximum of 50 requests per minute. Exceeding this limit will re
 Example error response:
 ```json
 {
-    "error": "Too many requests. Please wait before trying again."
+  "error": "Too many requests. Please wait before trying again."
 }
 ```
