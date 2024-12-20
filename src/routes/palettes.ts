@@ -1,5 +1,5 @@
 import express from 'express'
-import { getAllPalettes, getPaletteById } from '../services/paletteServices'
+import { getAllPalettes, getPaletteById, getPaletteByName } from '../services/paletteServices'
 
 const router = express.Router()
 
@@ -12,7 +12,16 @@ router.get('/id/:id', (req, res) => {
   if (palette !== undefined) {
     res.send(palette)
   } else {
-    res.status(400).send({ error: 'Palette not found' })
+    res.status(400).send({ error: `Palette of id: ${req.params.id} not found` })
+  }
+})
+
+router.get('/name/:name', (req, res) => {
+  const palette = getPaletteByName(req.params.name)
+  if (palette !== undefined) {
+    res.send(palette)
+  } else {
+    res.status(400).send({ error: `Palette of name: ${req.params.name} not found` })
   }
 })
 
