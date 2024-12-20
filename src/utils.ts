@@ -19,7 +19,7 @@ function parseName (nameFromRequest: any): string {
   } else if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(parsedName)) {
     throw new Error('Attribute name must not contain special characters and be in dash-case')
   } else if (palettes.map(c => c.name).includes(parsedName)) {
-    throw new Error(`${parsedName} is already in use`)
+    throw new Error(`${parsedName} name is already in use`)
   }
 
   return parsedName
