@@ -6,4 +6,4 @@ export interface ColorPalette {
   colors: Color[]
 }
 
-export type newPalette = Omit<ColorPalette, 'id'>
+export type newPaletteEntry = Omit<ColorPalette, 'id'>
