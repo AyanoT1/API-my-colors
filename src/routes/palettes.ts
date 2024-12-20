@@ -32,9 +32,9 @@ router.post('/', (req, res) => {
 
     const addedPaletteEntry = addPalette(newPaletteEntry)
 
-    res.json(addedPaletteEntry)
+    res.status(201).json(addedPaletteEntry)
   } catch (error) {
-    res.status(400).send((error as Error).message)
+    res.status(400).send({ error: (error as Error).message })
   }
 })
 
